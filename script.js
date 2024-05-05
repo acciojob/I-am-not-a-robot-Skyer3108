@@ -12,6 +12,10 @@ function handleclick(event){
   
   const selectedImages = document.querySelectorAll('.selected');
 
+	if(selectedImages.length==1){
+		reset.style.display='block';
+	}
+
 	if(selectedImages.length==2){
 
 		const firstImageClass = selectedImages[0].classList[0];
@@ -41,6 +45,11 @@ function handleclick(event){
 			selectedImages.forEach(image => image.classList.remove('selected'));
 
 			para.style.display='none'
+
+			verify.style.display = 'none';
+		reset.style.display='none';
+
+			
 		})
 		
     
